@@ -7,7 +7,7 @@ const Home = () => {
     <section className='lg:py-36'>
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
-          <h1 className='mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold text-transparent bg-clip-text bg-gradient-to-r text-black'>
+          <h1 className='mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold bg-clip-text bg-gradient-to-r text-black'>
             Jeremy Andersen
           </h1>
           <p className='text-base sm:text-lg mb-6 lg:text-xl'>
