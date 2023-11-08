@@ -54,7 +54,7 @@ const Exercitium = () => {
       <br />
       <p className="text-sm md:text-base lg:text-lg mt-4">
         Before I start to create a new project in Visual Studio and code it, I have to know about each classes
-        relationships with each other. I then design an Entity Relation Diagram, where I apply the rules of normalization 
+        relationships with each other. To create an overview, I design an Entity Relation Diagram, where I apply the rules of normalization 
         here to make sure my system follows the 3rd normal form (3NF). When that's done, I can then begin to code my web app and connect it with a database.
       </p>
       <br />
@@ -83,7 +83,21 @@ const Exercitium = () => {
         You start by selecting which exercise you want to inspect, and then you will be able to see your progress 
         with the chosen exercise in the line chart, by seeing how much weight you used when starting out until your most recent workout.
       </p>
+      <br />
       <Image src="/ExercitiumStatistics.png" alt="Project 1" width={500} height={300} className="mx-auto w-auto h-auto" />  
+      <br />
+      <h2 className='mt-4 text-1xl md:text-2xl lg:text-2xl font-semibold'>Administration</h2>
+      <p className='text-sm md:text-base lg:text-lg mt-4'>
+        Using authorization, I can have pages only visible to users with the administrator role. I created an exercises database table for
+        users to choose from when creating a workout. I made a secret page in the navigation bar for updating the list of exercises. This way,
+        users don't have to manually type each of their exercises. 
+
+        <br />
+        <br />
+
+        For practice mostly, but also a nice to have feature 
+        is a page for administrating roles. It's a list of every user on Exercitium, where an admin can change their roles. 
+      </p>
     </div>
   )
 }
