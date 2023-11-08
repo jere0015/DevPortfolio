@@ -7,7 +7,7 @@ const projectsData = [
     {
         id: 1,
         title: "Text translator",
-        description: "A web app for translating text with the option for between different machine translation providers.",
+        description: "A web app for translating text with the option for switching between different machine translation providers.",
         image: "/translator_example.png",
         gitUrl: "https://github.com/jere0015/Translate-Project",
         previewUrl: "/translator"

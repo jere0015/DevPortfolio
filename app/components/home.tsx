@@ -14,7 +14,7 @@ const Home = () => {
             Software Developer
           </p>
           <div className='socials flex flex-row gap-6 mb-4'>
-            <Link href="https://linkedin.com">
+            <Link href="https://www.linkedin.com/in/jeremy-andersen-b73192192/">
               <Image 
                 src="/linkedin.svg" 
                 alt="LinkedIn Profile" 

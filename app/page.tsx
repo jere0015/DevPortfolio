@@ -3,6 +3,7 @@ import Link from "next/link";
 import HomeSection from "./components/home"
 import AboutSection from './components/about';
 import ProjectsSection from './components/projects';
+import Footer from './components/footer';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <HomeSection />
         <AboutSection />
         <ProjectsSection />
+        <Footer />
       </div>
     </main>
   )

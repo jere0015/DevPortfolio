@@ -15,10 +15,15 @@ const TAB_DATA: TabDataItem[] = [
     id: "skills",
     content: (
       <ul className='list-disc pl-2'>
-        <li>C#</li>
-        <li>.NET</li>
-        <li>Python</li>
-        <li>HTML/CSS</li>
+        <li><span className='font-semibold'>Programming Languages: </span>C#, Python, TypeScript, HTML/CSS</li>
+        <li><span className='font-semibold'>Frameworks & Libraries: </span>.NET, ASP.NET Core MVC/API, EF Core, WPF, Blazor, Angular, jQuery </li>
+        <li><span className='font-semibold'>Databases: </span>MSSQL, MongoDB</li>
+        <li><span className='font-semibold'>Unit Testing: </span>xUnit, Fluent Assertions</li>
+        <li><span className='font-semibold'>Machine Learning: </span>PyTorch, Pandas, NumPy, Scikit-Learn</li>
+        <li><span className='font-semibold'>DevOps & Deployment: </span>Docker, Azure DevOps</li>
+        <li><span className='font-semibold'>Other: </span>Agile Scrum, Git, Jira, Microsoft Teams, Office365, Windows</li>
+        <br />
+        <p><span className='font-semibold'>Currently learning: </span>Next.JS</p>
       </ul>
     )
   },
@@ -27,8 +32,8 @@ const TAB_DATA: TabDataItem[] = [
     id: "education",
     content: (
       <ul className='list-disc pl-2'>
-        <li>Pba in Software Development</li>
-        <li>Computer Science</li>
+        <li><span className='font-semibold'>P.ba. in Software Development</span> - UCL Erhvervsakademi & Professionshøjskole, Odense - <span className='italic'>Feb 2022 to Jun 2023</span></li>
+        <li><span className='font-semibold'>Computer Science AK</span> - UCL Erhvervsakademi & Professionshøjskole, Odense - <span className='italic'>Sep 2018 to Jan 2022</span></li>
       </ul>
     )
   },
@@ -37,8 +42,8 @@ const TAB_DATA: TabDataItem[] = [
     id: "work experience",
     content: (
       <ul className='list-disc pl-2'>
-        <li>Software Developer Intern at Relesys - Jan 2023 to Mar 2023</li>
-        <li>Software Developer Intern at Cerebriu - Aug 2021 to Oct 2021</li>
+        <li><span className='font-semibold'>Software Developer Intern at Relesys</span> - <span className='italic'>Jan 2023 to Mar 2023</span></li>
+        <li><span className='font-semibold'>Software Developer Intern at Cerebriu</span> - <span className='italic'>Aug 2021 to Oct 2021</span></li>
       </ul>
     )
   }
@@ -68,8 +73,12 @@ const About: React.FC = () => {
           <p className='text-base lg:text-lg'>
             Programmer with a passion for developing software and learning
             something new every day. I am used to working in agile teams with
-            a focus on delivering according to the customer’s needs.
+            a focus on delivering according to the customer's needs. When I'm 
+            not coding, I enjoy going to the gym, reading, or playing padel with
+            friends.
           </p>
+          <br />
+          <p>I speak Danish & English</p>
           <div className='flex flex-row justify-start mt-8'>
             <TabButton
               selectTab={() => handleTabChange("skills")}
