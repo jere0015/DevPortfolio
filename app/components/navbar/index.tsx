@@ -22,7 +22,7 @@ const Navbar = () => {
     <nav className='fixed mx-auto border border-[#ffffff] top-0 left-0 right-0 z-10 bg-[#ffffff] bg-opacity-90'>
       <div className='flex container lg:py-4flex-wrap items-center justify-between mx-auto px-4 py-2'>
         <Link href={"/"} className='text-2xl md:text-5xl font-semibold'>
-          Jeremy's Portfolio
+          Jeremy&apos;s Portfolio
         </Link>
         <div className='mobile-menu block md:hidden'>
           {

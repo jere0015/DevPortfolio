@@ -15,16 +15,16 @@ const Translator = () => {
       <p className="text-sm md:text-base lg:text-lg mt-4">
         The idea for this web app came from my previous internship, as I had to search for 
         new translation providers, which was a part of a proof-of-concept project I was given. To easily test them with my leader, I was asked to code a web app, 
-        so I wouldn't have to switch between different tabs in Postman making API requests.
+        so I wouldn&apos;t have to switch between different tabs in Postman making API requests.
       </p>
       <br />
       <p className="text-sm md:text-base lg:text-lg mt-4">
         I started by going through what this web app needs in order to work. When knowing this app only had POST requests, I started coding it.
-        Not that the tech stack mattered, but it was obvious I was gonna use ASP.NET Core MVC since that's the framework my internship used.
+        Not that the tech stack mattered, but it was obvious I was gonna use ASP.NET Core MVC since that&apos;s the framework my internship used.
       </p>
       <br />
       <p className="text-sm md:text-base lg:text-lg mt-4">
-        Here's the tech stack I used for this project.
+        Here&apos;s the tech stack I used for this project.
       </p>
       <br />
       <h5 className='text-lg md:text-xl font-semibold'>Tech Stack:</h5>

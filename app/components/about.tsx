@@ -98,7 +98,7 @@ const About: React.FC = () => {
           <p className='text-base lg:text-lg'>
             Programmer with a passion for developing software and learning
             something new every day. I am used to working in agile teams with
-            a focus on delivering according to the customer's needs. When I'm 
+            a focus on delivering according to the customer&apos;s needs. When I&apos;m 
             not coding, I enjoy going to the gym, reading, or playing padel with
             friends.
           </p>

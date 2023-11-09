@@ -22,14 +22,14 @@ const Exercitium = () => {
         I started brainstorming ideas for the app regarding the point of it, features and platforms. 
         Instead of solely developing the app for my own sake, I began thinking of it as an app for 
         other people to use as well. Exercitium would be most accessible as a mobile app, so you 
-        don't have to open your computer each time you want to register a workout or view your statistics.
-        But since I don't have any mobile development experience and just wanted to develop an MVP, I 
+        don&apos;t have to open your computer each time you want to register a workout or view your statistics.
+        But since I don&apos;t have any mobile development experience and just wanted to develop an MVP, I 
         decided to create it as a web app.
       </p>
       <br />
       <p className="text-sm md:text-base lg:text-lg mt-4">
         I wrote all of the ideas for this app along with its features, tech stack and project management in
-        OneNote. Here's what I came up with.
+        OneNote. Here&apos;s what I came up with.
       </p>
       <br />
       <h5 className='text-lg md:text-xl font-semibold'>Tech Stack:</h5>
@@ -55,7 +55,7 @@ const Exercitium = () => {
       <p className="text-sm md:text-base lg:text-lg mt-4">
         Before I start to create a new project in Visual Studio and code it, I have to know about each classes
         relationships with each other. To create an overview, I design an Entity Relation Diagram, where I apply the rules of normalization 
-        here to make sure my system follows the 3rd normal form (3NF). When that's done, I can then begin to code my web app and connect it with a database.
+        here to make sure my system follows the 3rd normal form (3NF). When that&apos;s done, I can then begin to code my web app and connect it with a database.
       </p>
       <br />
       <Image src="/Exercitium_ER_Diagram.png" alt="Project 2" width={500} height={300} className="mx-auto w-auto h-auto" />
@@ -66,7 +66,7 @@ const Exercitium = () => {
       <p className="text-sm md:text-base lg:text-lg mt-4">
         The Workout page is where a user can register their workouts. The is the most crucial part of this system
         along with the Statistics page. I wanted this page to be simple to use, so from the Workout Overview, you click 
-        'create new workout' which takes you to a new page, where you simply fill out the
+        &apos;create new workout&apos; which takes you to a new page, where you simply fill out the
         date of the workout along with the type of workout. Then, you can choose from a list of exercises the 
         ones you want to add to your workout. For each chosen exercise, you fill out the amount of sets, reps and weight.
         Click create, and then you will be able to see your new workout in the Workout Overview, where you can then view,
@@ -90,13 +90,13 @@ const Exercitium = () => {
       <p className='text-sm md:text-base lg:text-lg mt-4'>
         Using authorization, I can have pages only visible to users with the administrator role. I created an exercises database table for
         users to choose from when creating a workout. I made a secret page in the navigation bar for updating the list of exercises. This way,
-        users don't have to manually type each of their exercises. 
+        users don&apos;t have to manually type each of their exercises. 
 
         <br />
         <br />
 
         For practice mostly, but also a nice to have feature 
-        is a page for administrating roles. It's a list of every user on Exercitium, where an admin can change their roles. 
+        is a page for administrating roles. It&apos;s a list of every user on Exercitium, where an admin can change their roles. 
       </p>
     </div>
   )
