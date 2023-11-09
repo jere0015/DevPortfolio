@@ -46,6 +46,31 @@ const TAB_DATA: TabDataItem[] = [
         <li><span className='font-semibold'>Software Developer Intern at Cerebriu</span> - <span className='italic'>Aug 2021 to Oct 2021</span></li>
       </ul>
     )
+  },
+  {
+    title: "Recommendation",
+    id: "recommendation",
+    content: (
+      <p>
+        Jeremy Andersen was a Software Developer Intern which I had the pleasure of mentoring from January 1st to March 31st. 
+        During his time at Relesys he was assigned to the Product Development Team where he with great enthusiasm primarily 
+        undertook backend-related assignments in C# and T-SQL., where the main focus was on implementing web based features
+        to our product ASP.NET MVC. He quickly learned the fundamentals of the business logic behind the features he worked 
+        on and contributed with solutions as to how problems and/or his assignments could be solved. He was part of a dedicated 
+        team where he took part in daily stand-ups as well as internal developer meetings and sprint retrospectives. 
+        He collaborated with QA engineers as well as stakeholders to implement, test and release production-ready 
+        features within the given timeframe of completion.
+
+        <br />
+        <br />
+        Thomas Jensen, 
+        <br />
+        toje@relesys.net
+        <br />
+        +45 20 62 99 10 
+
+      </p>
+    )
   }
 ]
 
@@ -100,6 +125,13 @@ const About: React.FC = () => {
             >
               {" "}
               Work experience{" "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("recommendation")}
+              active={tab === "recommendation"}
+            >
+              {" "}
+              Recommendation{" "}
             </TabButton>
           </div>
           <div className='mt-8'>
