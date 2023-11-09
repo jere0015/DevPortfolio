@@ -32,7 +32,7 @@ const cardVariants = {
 }
 
   return (
-    <section ref={ref}>
+    <section ref={ref} className='text-black'>
       <h2 id="projects" className='text-center text-4xl font-bold mt-4'>
         My Projects
       </h2>

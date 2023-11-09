@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Exercitium = () => {
   return (
-    <div className="text-justify p-4 md:p-10 lg:p-16 max-w-4xl mx-auto py-36">
+    <div className="text-justify p-4 md:p-10 lg:p-16 max-w-4xl mx-auto py-36 text-black">
       <Image src="/ExercitiumLogo.png" alt="Project 1" width={300} height={300} className="mx-auto w-auto h-auto" />
       <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold text-center mt-4'>Exercitium</h1>
       <p className="text-sm md:text-base lg:text-lg mt-4">
