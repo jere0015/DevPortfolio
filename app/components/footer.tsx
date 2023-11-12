@@ -13,7 +13,7 @@ const Footer = () => {
       <header className="footer-title">Socials</header> 
         <div className="grid grid-flow-col gap-4">
           <div className='socials flex flex-row gap-6 mb-4'>
-            <Link href="https://www.linkedin.com/in/jeremy-andersen-b73192192/">
+            <Link href="https://www.linkedin.com/in/jeremy-andersen-b73192192/" target="_blank">
               <Image 
                 src="/linkedin.svg" 
                 alt="LinkedIn Profile" 
@@ -21,7 +21,7 @@ const Footer = () => {
                 height={30}
               />
             </Link>
-            <Link href="https://github.com/jere0015">
+            <Link href="https://github.com/jere0015" target="_blank">
               <Image 
                 src="/github.svg" 
                 alt="LinkedIn Profile" 

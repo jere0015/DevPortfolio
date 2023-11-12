@@ -1,11 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Exercitium = () => {
   return (
     <div className="text-justify p-4 md:p-10 lg:p-16 max-w-4xl mx-auto py-36 text-black">
       <Image src="/ExercitiumLogo.png" alt="Project 1" width={300} height={300} className="mx-auto w-auto h-auto" />
       <h1 className='text-2xl md:text-3xl lg:text-4xl font-bold text-center mt-4'>Exercitium</h1>
+      <p className="text-sm md:text-base lg:text-lg mt-4">
+        <Link href="https://www.youtube.com/watch?v=blBR6c4i8kQ" className='hover:bg-blue-500 hover:text-white underline' target="_blank">Live demo</Link>
+      </p>
+      <br />
       <p className="text-sm md:text-base lg:text-lg mt-4">
         Exercitium is a web app where you can track your workouts. After a workout, you log it on Exercitium,
         so you can look back at your previous workouts and see how much you have progressed over time.
@@ -58,7 +63,7 @@ const Exercitium = () => {
         here to make sure my system follows the 3rd normal form (3NF). When that&apos;s done, I can then begin to code my web app and connect it with a database.
       </p>
       <br />
-      <Image src="/Exercitium_ER_Diagram.png" alt="Project 2" width={500} height={300} className="mx-auto w-auto h-auto" />
+      <Image src="/Exercitium_ER_Diagram.png" alt="Exercitium_ER_Diagram.png" width={500} height={300} className="mx-auto w-auto h-auto" />
       <br />
       <h2 className='mt-4 text-1xl md:text-2xl lg:text-2xl font-semibold'>
         Workout
@@ -73,7 +78,7 @@ const Exercitium = () => {
         edit or delete it.
       </p>
       <br />
-      <Image src="/ExercitiumWorkout.png" alt="Project 3" width={300} height={300} className="mx-auto w-auto h-auto" />
+      <Image src="/ExercitiumWorkout.png" alt="Exercitium_Workout" width={300} height={300} className="mx-auto w-auto h-auto" />
       <br/>
       <h2 className='mt-4 text-1xl md:text-2xl lg:text-2xl font-semibold'>
         Statistics

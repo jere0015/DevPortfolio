@@ -21,7 +21,7 @@ const TAB_DATA: TabDataItem[] = [
         <li><span className='font-semibold'>Unit Testing: </span>xUnit, Fluent Assertions</li>
         <li><span className='font-semibold'>Machine Learning: </span>PyTorch, Pandas, NumPy, Scikit-Learn</li>
         <li><span className='font-semibold'>DevOps & Deployment: </span>Docker, Azure DevOps</li>
-        <li><span className='font-semibold'>Other: </span>Agile Scrum, Git, Jira, Microsoft Teams, Office365, Windows</li>
+        <li><span className='font-semibold'>Other: </span>Agile Scrum, Git, Postman, Jira, Microsoft Teams, Office365, Windows</li>
         <br />
         <p><span className='font-semibold'>Currently learning: </span>Next.JS</p>
       </ul>
