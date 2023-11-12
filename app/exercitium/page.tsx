@@ -63,7 +63,7 @@ const Exercitium = () => {
         here to make sure my system follows the 3rd normal form (3NF). When that&apos;s done, I can then begin to code my web app and connect it with a database.
       </p>
       <br />
-      <Image src="/Exercitium_ER_diagram.png" alt="Exercitium_ER_Diagram.png" width={500} height={300} className="mx-auto w-auto h-auto" />
+      <Image src="/Exercitium_ER_diagram.png" alt="Exercitium_ER_Diagram" width={500} height={300} className="mx-auto w-auto h-auto" />
       <br />
       <h2 className='mt-4 text-1xl md:text-2xl lg:text-2xl font-semibold'>
         Workout
