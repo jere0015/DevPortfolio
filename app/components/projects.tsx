@@ -1,28 +1,20 @@
 "use client";
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import ProjectCard from './projectcard'
 import { motion, useInView } from 'framer-motion'
+import { client } from '@/sanity/lib/client';
 
-const projectsData = [
-    {
-        id: 1,
-        title: "Text translator",
-        description: "A web app for translating text with the option for switching between different machine translation providers.",
-        image: "/translator_example.png",
-        gitUrl: "https://github.com/jere0015/Translate-Project",
-        previewUrl: "/translator"
-    },
-    {
-        id: 2,
-        title: "Exercitium",
-        description: "Exercitium is a Web App where you can track your workouts. After a workout, you log it on Exercitium, so you can look back at your previous workouts and see how much you have progressed.",
-        image: "/ExercitiumLogo.png",
-        gitUrl: "https://github.com/jere0015/Exercitium",
-        previewUrl: "/exercitium"
-    }
-]
+interface Project {
+  _id: string;
+  title: string;
+  description: string;
+  image: string;
+  gitUrl: string;
+  slug:string;
+}
 
 const Projects = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -31,6 +23,22 @@ const cardVariants = {
   animate: { y: 0, opacity: 1}
 }
 
+useEffect(() => {
+  const fetchProjects = async () => {
+    const query = `*[_type == "post"]{
+      _id,
+      title,
+      "description": shortText[0].children[0].text,
+      "image": mainImage.asset->url,
+      gitUrl,
+      "slug": slug.current
+    }`;
+    const data = await client.fetch(query);
+    setProjects(data);
+  };
+  fetchProjects();
+}, []);
+
   return (
     <section ref={ref} className='text-black'>
       <h2 id="projects" className='text-center text-4xl font-bold mt-4'>
@@ -38,18 +46,22 @@ const cardVariants = {
       </h2>
       <br />
       <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
-        {projectsData.map((project, index) => (
-          <motion.li key={index} variants={cardVariants} initial='initial' animate={isInView ? "animate" : "initial"} transition={{ duration: 0.3, delay: index * 0.4 }}>
+        {projects.length === 0 ? (
+          <p className='text-3xl'>NO PROJECTS FOUND</p>
+        ) : (
+          projects.map((project, index) => (
+            <motion.li key={index} variants={cardVariants} initial='initial' animate={isInView ? "animate" : "initial"} transition={{ duration: 0.3, delay: index * 0.4 }}>
             <ProjectCard 
-              key={project.id} 
-              title={project.title} 
-              description={project.description} 
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
+            key={project._id} 
+            title={project.title} 
+            description={project.description} 
+            imgUrl={project.image}
+            gitUrl={project.gitUrl}
+            previewUrl={`/${project.slug}`}
             /> 
-          </motion.li>
-        ))}
+            </motion.li>
+          ))
+        )}
       </ul>
     </section>
   )
