@@ -3,6 +3,12 @@ import { urlFor } from '@/sanity/lib/image';
 import { PortableText, PortableTextComponents } from '@portabletext/react';
 import Image from 'next/image';
 
+interface ProjectPageParams {
+  params: {
+    slug: string;
+  }
+}
+
 interface Project {
     title: string;
     mainImage: any;
@@ -51,7 +57,7 @@ interface Project {
       },
   };
 
-  export default async function ProjectPage({ params }: { params: { slug: string } }) {
+  export default async function ProjectPage({ params }: ProjectPageParams) {
     const project: Project = await getProject(params.slug);
   
     if (!project) return <div>Project not found</div>;
