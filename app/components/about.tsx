@@ -16,7 +16,7 @@ const TAB_DATA: TabDataItem[] = [
     content: (
       <ul className='list-disc pl-2'>
         <li><span className='font-semibold'>Programming Languages: </span>C#, Python, TypeScript, HTML/CSS</li>
-        <li><span className='font-semibold'>Frameworks & Libraries: </span>.NET, ASP.NET Core MVC/API, EF Core, WPF, Blazor, Angular, jQuery </li>
+        <li><span className='font-semibold'>Frameworks & Libraries: </span>.NET, ASP.NET Core MVC/API, EF Core, Winforms, WPF, Stripe, Blazor, Angular, jQuery </li>
         <li><span className='font-semibold'>Databases: </span>MSSQL, MongoDB</li>
         <li><span className='font-semibold'>Unit Testing: </span>xUnit, Fluent Assertions</li>
         <li><span className='font-semibold'>Machine Learning: </span>PyTorch, Pandas, NumPy, Scikit-Learn</li>
@@ -42,6 +42,8 @@ const TAB_DATA: TabDataItem[] = [
     id: "work experience",
     content: (
       <ul className='list-disc pl-2'>
+        <li><span className='font-semibold'>Software Developer at Popermo Forsikring GS</span> - <span className='italic'>Jul 2024 to Today</span></li>
+        <li><span className='font-semibold'>Software Developer at EPICO-IT (freelancing at Popermo Forsikring GS)</span> - <span className='italic'>Jan 2024 to Jun 2024</span></li>
         <li><span className='font-semibold'>Software Developer Intern at Relesys</span> - <span className='italic'>Jan 2023 to Mar 2023</span></li>
         <li><span className='font-semibold'>Software Developer Intern at Cerebriu</span> - <span className='italic'>Aug 2021 to Oct 2021</span></li>
       </ul>
@@ -103,7 +105,7 @@ const About: React.FC = () => {
             friends.
           </p>
           <br />
-          <p>I speak Danish & English</p>
+          <p className='text-base lg:text-lg'>I speak Danish & English</p>
           <div className='flex flex-row justify-start mt-8'>
             <TabButton
               selectTab={() => handleTabChange("skills")}
