@@ -26,19 +26,18 @@ const cardVariants = {
 useEffect(() => {
   const fetchProjects = async () => {
     const query = `*[_type == "post"]{
-        _id,
-        title,
-        "description": shortText[0].children[0].text,
-        "image": mainImage.asset->url,
-        gitUrl,
-        "slug": slug.current
-      }`;
-      const data = await client.fetch(query);
-      setProjects(data);
-  }
-
-  fetchProjects()
-})
+      _id,
+      title,
+      "description": shortText[0].children[0].text,
+      "image": mainImage.asset->url,
+      gitUrl,
+      "slug": slug.current
+    }`;
+    const data = await client.fetch(query);
+    setProjects(data);
+  };
+  fetchProjects();
+}, []);
 
   return (
     <section ref={ref} className='text-black'>
@@ -47,18 +46,22 @@ useEffect(() => {
       </h2>
       <br />
       <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
-        {projects.map((project, index) => (
-          <motion.li key={index} variants={cardVariants} initial='initial' animate={isInView ? "animate" : "initial"} transition={{ duration: 0.3, delay: index * 0.4 }}>
+        {projects.length === 0 ? (
+          <p className='text-3xl'>NO PROJECTS FOUND</p>
+        ) : (
+          projects.map((project, index) => (
+            <motion.li key={index} variants={cardVariants} initial='initial' animate={isInView ? "animate" : "initial"} transition={{ duration: 0.3, delay: index * 0.4 }}>
             <ProjectCard 
-              key={project._id} 
-              title={project.title} 
-              description={project.description} 
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={`/${project.slug}`}
+            key={project._id} 
+            title={project.title} 
+            description={project.description} 
+            imgUrl={project.image}
+            gitUrl={project.gitUrl}
+            previewUrl={`/${project.slug}`}
             /> 
-          </motion.li>
-        ))}
+            </motion.li>
+          ))
+        )}
       </ul>
     </section>
   )
