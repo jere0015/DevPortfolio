@@ -4,9 +4,7 @@ import { PortableText, PortableTextComponents } from '@portabletext/react';
 import Image from 'next/image';
 
 interface ProjectPageParams {
-  params: {
     slug: string;
-  }
 }
 
 interface Project {
@@ -16,7 +14,7 @@ interface Project {
     gitUrl: string;
   }
 
-  async function getProject(slug: string) {
+  async function getProject(slug: string): Promise<Project | null> {
     const query = `*[_type == "post" && slug.current == $slug][0]`;
     const project = await client.fetch(query, { slug });
     return project;
@@ -57,8 +55,8 @@ interface Project {
       },
   };
 
-  export default async function ProjectPage({ params }: ProjectPageParams) {
-    const project: Project = await getProject(params.slug);
+  export default async function ProjectPage({ params }: { params: ProjectPageParams }){
+    const project = await getProject(params.slug);
   
     if (!project) return <div>Project not found</div>;
 
