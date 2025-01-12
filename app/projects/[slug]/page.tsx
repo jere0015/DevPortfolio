@@ -60,9 +60,9 @@ const components: PortableTextComponents = {
 export default async function ProjectPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{slug: string }>
 }) {
-  const project = await getProject(params.slug);
+  const project = await getProject((await params).slug);
 
   if (!project) return <div>Project not found</div>;
 
